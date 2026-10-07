@@ -11,18 +11,24 @@ number_of_subjects = st.number_input(
     step=1
 )
 
-st.write("### Enter your grades")
+st.write("### Enter your subjects and grades")
 
 total = 0
 
 for i in range(number_of_subjects):
+    subject = st.text_input(
+        f"Subject {i + 1} name",
+        placeholder="Example: AP Physics"
+    )
+
     grade = st.number_input(
-        f"Subject {i + 1} grade",
+        f"{subject if subject else 'Subject ' + str(i + 1)} grade",
         min_value=0.0,
         max_value=100.0,
         value=90.0,
         step=0.5
     )
+
     total += grade
 
 if st.button("Calculate Grade"):
@@ -41,4 +47,3 @@ if st.button("Calculate Grade"):
 
     st.success(f"Overall Average: {average:.2f}%")
     st.info(f"Letter Grade: {letter}")
-        
