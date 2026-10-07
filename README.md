@@ -1,6 +1,6 @@
 # Student Grade Calculator 
 
-A beginner grade calculator that calculates student's overall grades and gives the latter grade 
+A beginner grade calculator that calculates student's overall grades and gives the letter grade 
 
 features includes 
 1. You can put as many subjects you want
